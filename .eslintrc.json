@@ -16,7 +16,9 @@
       "eol-last": "off",
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
-      }]
+      }],
+        "no-nested-ternary": "off"
+      
     },
     "ignorePatterns": [
       "dist/",

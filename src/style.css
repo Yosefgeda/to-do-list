@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(192, 187, 187);
+  background-color: rgb(192, 187, 187);
 }
 
 .container {
@@ -18,15 +18,15 @@ body {
 }
 
 .header-refresh {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid rgb(129, 126, 126);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgb(129, 126, 126);
 }
 
 .header-refresh h1 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .input-field {
@@ -38,14 +38,14 @@ body {
 }
 
 .input-field input {
-    border: none;
-    padding: 20px;
-    background-color: white
+  border: none;
+  padding: 20px;
+  background-color: white;
 }
 
 .submit-btn {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 .todo-lists {
