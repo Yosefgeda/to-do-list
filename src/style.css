@@ -1,4 +1,44 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    margin-top: 10%;
+    margin-left: 40%;
+    
+}
+
+/* .add-list {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+} */
+
+.input-field {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.todo-lists {
+    margin-top: 3%;
+    display: flex;
+}
+
+.generated-list {
+    width: 50%;
+}
+
+.todo-lists {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+}
+
+.delete-btn {
+    margin-left: auto;
 }
