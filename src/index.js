@@ -1,50 +1,34 @@
-import _ from 'lodash';
 import './style.css';
 
-// function component() {
-//     const element = document.createElement('div');
-  
-//     // Lodash, now imported by this script
-//     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-//     return element;
-//   }
-  
-//   document.body.appendChild(component());
-let list = [
-    {
-        description: 'Grocery Shopping',
-        completed: false,
-        index: 1
-    },
-    {
-        description: 'Finish Homeworks',
-        completed: false,
-        index: 2
-    },
-    {
-        description: 'Pay Bills',
-        completed: false,
-        index: 3
-    }
-]
- const generatedList = document.querySelector('.generated-list');
- 
- 
+const list = [
+  {
+    description: 'Grocery Shopping',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Finish Homeworks',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Pay Bills',
+    completed: false,
+    index: 3,
+  },
+];
+const generatedList = document.querySelector('.generated-list');
 
- let displayTodo = () => {
-    const displayTodo = list.map((item) =>
-    `
+const displayTodo = () => {
+  const displayTodo = list.map((item) => `
     <div class='todo-lists'>
         <input type="checkbox" class='check-box' id='${item.index}'>
         <p class='todo-paragraph'>${item.description}</p>
         <button class='delete-btn'>Delete</button>
     </div>
- `
- );
- 
- generatedList.innerHTML = (displayTodo).join('');
- 
+ `);
+
+  generatedList.innerHTML = (displayTodo).join('');
 };
 
 displayTodo();
