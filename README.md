@@ -40,7 +40,7 @@
 # 📖 [to-do-list] <a name="about-project"></a>
 
 
-**[# 📖 [to-do-list]  Webpage to save and delete todo lists.  
+# 📖 [to-do-list]  Webpage to save and delete todo lists.  
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -79,7 +79,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Live Demo is not available yet
+> Live Demo is not available yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,7 +160,7 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issue page](https://github.com/Yosefgeda/to-do-list/issues)
 
 <!-- SUPPORT -->
-If you have any question fell free to asl=k on the isted social medias.
+You can contact me for any question you have on the listed social media pages.
 
 If you like this project follow and give thumbs up on likedin
 
