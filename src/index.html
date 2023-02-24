@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+      <div class="add-list">
+
+        <div class="header-refresh">
+            <h1>Today's To Do</h1>
+            <img class="submit-btn" src=<%=require('./arrows-rotate-solid.svg')%> />
+        </div>
+            
+                <div class="input-field">
+                    <input type="text" placeholder="Add your list..."> 
+                    <img class="submit-btn" src=<%=require('./download.svg')%> />
+                </div>
+        </div>
+
+        <div class="generated-list">
+
+        </div>
+
+        <button class="clear-all">Clear all completed</button> 
+        
+    </div>
+</body>
+</html>
