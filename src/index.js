@@ -1,45 +1,36 @@
 import './style.css';
-import Icon from './ellipsis-vertical-solid.svg';
 
-// const container = document.querySelector('.container');
-const generatedList = document.querySelector('.generated-list');
+import Arrows from './arrows-rotate-solid.svg';
+import Download from './download.svg';
+import Icon from './trash-solid.svg';
 
-const list = [
-  {
-    description: 'Grocery Shopping',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Finish Homeworks',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Pay Bills',
-    completed: false,
-    index: 3,
-  },
-];
+import * as htmlHolder from './modules/innerHtml.js';
+import * as classObject from './modules/todoClass.js';
 
-const sortedList = list.sort(
+htmlHolder.innerHtmlHolder(Arrows, Download);
+const addListBtn = document.querySelector('.add-list-btn');
+const inputValue = document.querySelector('.input-field-add');
 
-  (l1, l2) => (
-    (l1.index > l2.index) ? 1 : (l1.index < l2.index) ? -1 : 0
-  ),
+let id;
+addListBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (inputValue.value !== '') {
+    id = Math.floor(Math.random() * 10000);
+    let n;
+    const listObj = new classObject.ListObj(inputValue.value, false, n, id);
+    classObject.list.push(listObj);
+    inputValue.value = '';
+    classObject.displayTodo(Icon);
+    classObject.removeTodo();
+    for (let i = 0; i < classObject.list.length; i += 1) {
+      n = i + 1;
+      classObject.list[i].index = n;
+    }
+    classObject.addToStorage(classObject.list);
+  }
+});
 
-);
-
-const displayTodo = () => {
-  const displayTodo = sortedList.map((item) => `
-    <div class='todo-lists'>
-        <input type="checkbox" class='check-box' id='${item.index}'>
-        <p class='todo-paragraph'>${item.description}</p>
-        <img src='${Icon}' class='delete-btn'>
-    </div>
- `);
-
-  generatedList.innerHTML = (displayTodo).join('');
-};
-
-displayTodo();
+window.addEventListener('DOMContentLoaded', () => {
+  classObject.displayTodo();
+  classObject.removeTodo();
+});

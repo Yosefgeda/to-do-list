@@ -48,6 +48,10 @@ body {
   height: 15px;
 }
 
+.submit-btn:hover {
+  cursor: pointer;
+}
+
 .todo-lists {
   margin-top: 3%;
   display: flex;
@@ -67,8 +71,16 @@ body {
 .clear-all {
   border: none;
   padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .clear-all:hover {
   cursor: pointer;
+}
+
+.drop-down {
+  display: none;
 }
