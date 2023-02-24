@@ -61,11 +61,37 @@ body {
   padding: 20px;
 }
 
+.todo-paragraph {
+  width: 60%;
+  padding: 5px;
+}
+
 .delete-btn {
   margin-left: auto;
   width: 15px;
   height: 15px;
   background-color: white;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.icon-holder {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+.edit-btn {
+  width: 15px;
+  height: 15px;
+}
+
+.edit-btn:hover {
+  cursor: pointer;
 }
 
 .clear-all {

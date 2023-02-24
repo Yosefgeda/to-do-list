@@ -37,16 +37,14 @@
 - [📝 License](#license)
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome-books] <a name="about-project"></a>
+# 📖 [to-do-list] <a name="about-project"></a>
 
 
-**[# 📖 [Awesome-books]  Webpag to save and dlelete personal fevorite books.  
+**[# 📖 [to-do-list]  Webpage to save and delete todo lists.  
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -81,7 +79,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->You can view the final page on the index.html
+Live Demo is not available yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,6 +139,8 @@ You can view the page on index.html
 
  **YosefGeda**
 - GitHub: [@yosefgeda](https://github.com/yosefgeda)
+- Twitter: [@yosefgeda](https://twitter.com/yosegeda)
+- LinkedIn: [yosefgeda](https://linkedin.com/in/yosefgeda)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -160,6 +160,7 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issue page](https://github.com/Yosefgeda/to-do-list/issues)
 
 <!-- SUPPORT -->
+If you have any question fell free to asl=k on the isted social medias.
 
 If you like this project follow and give thumbs up on likedin
 
@@ -188,7 +189,7 @@ I would like to thank to my coding partners.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Lornakaboro/Awesome-books/blob/main/LICENSE) licensed.
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

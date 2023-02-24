@@ -9,18 +9,8 @@ export class ListObj {
   }
 }
 
-const generatedList = document.querySelector('.generated-list');
-export const displayTodo = (Icon) => {
-  const displayTodo = list.map((item) => `
-    <div class='todo-lists'>
-        <input type="checkbox" class='check-box'>
-        <input class='todo-paragraph' value='${item.description}'>
-        <img src='${Icon}' class='delete-btn' data-id=${item.id}>
-    </div>
- `);
+export const generatedList = document.querySelector('.generated-list');
 
-  generatedList.innerHTML = (displayTodo).join('');
-};
 
 export const addToStorage = () => {
   const storage = localStorage.setItem('todos', JSON.stringify(list));
@@ -35,13 +25,16 @@ export const removeTodArray = (id) => {
 export const removeTodo = () => {
   generatedList.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete-btn')) {
-      e.target.parentElement.remove();
+      e.target.parentElement.parentElement.remove();
+      
+      const deleteBtn = e.target.dataset.id;
+      removeTodArray(deleteBtn);
     }
-    const deleteBtn = e.target.dataset.id;
-
-    removeTodArray(deleteBtn);
+    
   });
 };
+
+
 
 export const getStorage = () => {
   const storage = localStorage.getItem('todos') === null ? [] : JSON.parse(localStorage.getItem('todos'));
@@ -49,5 +42,30 @@ export const getStorage = () => {
 };
 
 list = getStorage();
+
+export const editBtn = () => {
+    let changeIcon = true;
+    generatedList.addEventListener('click', (e) => {
+        if (e.target.classList.contains('edit-btn')) {
+            //  const p = document.querySelector('.todo-paragraph');
+          let value = e.target.parentElement.parentElement.parentElement.childNodes[3];
+          const btnId = e.target.dataset.id;
+          if(changeIcon) {
+            value.setAttribute('contenteditable', 'true');
+            value.focus();
+            e.target.parentElement.innerHTML = `<button>Save</button>`;
+          } else {
+            e.target.parentElement.innerHTML = `<img src='${Edit}'>`;
+            value.removeAttribute('contenteditable');
+            const newList = list.findIndex((item) => item.id === +btnId);
+            list[newList].description = value.textContent;
+            addToStorage(list);
+          }
+        }
+        changeIcon = !changeIcon;
+      });
+        
+
+}
 
 export { list };
