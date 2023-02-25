@@ -59,8 +59,6 @@ classObject.generatedList.addEventListener('click', classObject.deleteDone);
 clearAll.addEventListener('click', () => {
   classObject.clear();
   displayTodo();
-
-  // checkBox.parentElement.innerHTML = '';
 });
 
 window.addEventListener('DOMContentLoaded', () => {

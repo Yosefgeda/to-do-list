@@ -11,7 +11,6 @@ export class ListObj {
 
 export const generatedList = document.querySelector('.generated-list');
 
-
 export const addToStorage = () => {
   const storage = localStorage.setItem('todos', JSON.stringify(list));
   return storage;
@@ -33,8 +32,6 @@ export const removeTodo = () => {
     
   });
 };
-
-
 
 export const getStorage = () => {
   const storage = localStorage.getItem('todos') === null ? [] : JSON.parse(localStorage.getItem('todos'));
@@ -62,8 +59,6 @@ export const editBtn = () => {
         }
         changeIcon = !changeIcon;
       });
-        
-
 }
 
 export const deleteDone = (e) => {
@@ -77,9 +72,6 @@ export const deleteDone = (e) => {
   localStorage.setItem('todos', JSON.stringify(task));
 };
 
-
-
-
 export const clear = (e) => {
   const set = JSON.parse(localStorage.getItem('todos')) || [];
   const notDone = set.filter((list) => !list.completed);
@@ -90,16 +82,6 @@ export const clear = (e) => {
   }
   
   const todoLists = document.querySelector('.todo-lists');
-
-  for (let i = 0; i < set.length; i++){
-    
-    if(set[i].completed === true){
-      //n = document.getElementById(`${set[i].id}`);
-      
-      console.log(set[i])
-    }
-  }
-
 
   set.length = 0;
   let i = 1;
