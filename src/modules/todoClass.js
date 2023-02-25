@@ -47,7 +47,6 @@ export const editBtn = () => {
     let changeIcon = true;
     generatedList.addEventListener('click', (e) => {
         if (e.target.classList.contains('edit-btn')) {
-            //  const p = document.querySelector('.todo-paragraph');
           let value = e.target.parentElement.parentElement.parentElement.childNodes[3];
           const btnId = e.target.dataset.id;
           if(changeIcon) {
@@ -66,5 +65,52 @@ export const editBtn = () => {
         
 
 }
+
+export const deleteDone = (e) => {
+  const checked = e.target.closest('.check-box');
+  if(!checked) return;
+  const cleared = parseInt(checked.getAttribute('data-id'), 10);
+  const task = JSON.parse(localStorage.getItem('todos')) || [];
+  const find = task.find((todo) => todo.id === cleared);
+  find.completed = !find.completed;
+ 
+  localStorage.setItem('todos', JSON.stringify(task));
+};
+
+
+
+
+export const clear = (e) => {
+  const set = JSON.parse(localStorage.getItem('todos')) || [];
+  const notDone = set.filter((list) => !list.completed);
+  
+
+  if (notDone.length === 0){
+    generatedList.style.display = 'none';
+  }
+  
+  const todoLists = document.querySelector('.todo-lists');
+
+  for (let i = 0; i < set.length; i++){
+    
+    if(set[i].completed === true){
+      //n = document.getElementById(`${set[i].id}`);
+      
+      console.log(set[i])
+    }
+  }
+
+
+  set.length = 0;
+  let i = 1;
+  notDone.forEach((element) => {
+    element.index = i;
+    i += 1;
+  });
+  set.push(...notDone);
+
+  localStorage.setItem('todos', JSON.stringify(set));
+  
+};
 
 export { list };
