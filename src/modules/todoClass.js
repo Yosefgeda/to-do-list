@@ -54,8 +54,7 @@ export const editBtn = () => {
             value.setAttribute('contenteditable', 'true');
             value.focus();
             e.target.parentElement.innerHTML = `<button>Save</button>`;
-          } else {
-            e.target.parentElement.innerHTML = `<img src='${Edit}'>`;
+          } else {           
             value.removeAttribute('contenteditable');
             const newList = list.findIndex((item) => item.id === +btnId);
             list[newList].description = value.textContent;
