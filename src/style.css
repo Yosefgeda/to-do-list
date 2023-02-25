@@ -107,6 +107,6 @@ body {
   cursor: pointer;
 }
 
-.drop-down {
-  display: none;
+.check-parag {
+  display: flex;
 }

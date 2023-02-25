@@ -12,16 +12,18 @@ htmlHolder.innerHtmlHolder(Arrows, Download);
 const addListBtn = document.querySelector('.add-list-btn');
 const inputValue = document.querySelector('.input-field-add');
 
+const clearAll = document.querySelector('.clear-all');
+
 const displayTodo = () => {
   const displayTodo = classObject.list.map((item) => `
-    <div class='todo-lists'>
-        
-            <input type="checkbox" class='check-box'>
+    <div class='todo-lists' id=${item.id}>
+        <div class='check-parag'>
+           <input type="checkbox" class='check-box' data-id=${item.id} ${item.completed}>
             <p class='todo-paragraph'>${item.description}</p>
-        
-        
-        
-        <div class="icon-holder">
+        </div>
+            
+      
+        <div class="icon-holder" >
           <span class='edit-btn-span' ><img src='${Edit}' class='edit-btn' data-id=${item.id}></span>
           <img src='${Icon}' class='delete-btn' data-id=${item.id}>
           
@@ -31,6 +33,8 @@ const displayTodo = () => {
 
   classObject.generatedList.innerHTML = (displayTodo).join('');
 };
+
+displayTodo();
 
 let id;
 addListBtn.addEventListener('click', (e) => {
@@ -43,14 +47,18 @@ addListBtn.addEventListener('click', (e) => {
     inputValue.value = '';
     displayTodo();
     classObject.removeTodo();
-
     for (let i = 0; i < classObject.list.length; i += 1) {
       n = i + 1;
       classObject.list[i].index = n;
     }
-
     classObject.addToStorage(classObject.list);
   }
+});
+
+classObject.generatedList.addEventListener('click', classObject.deleteDone);
+clearAll.addEventListener('click', () => {
+  classObject.clear();
+  displayTodo();
 });
 
 window.addEventListener('DOMContentLoaded', () => {
