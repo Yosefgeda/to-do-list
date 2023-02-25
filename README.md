@@ -79,7 +79,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->Live Demo is not available yet
+>[You can view the page on](https://yosefgeda.github.io/to-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +126,8 @@ To run the project on the html file run it through liveserver.
 
 
 ### Deployment
-You can view the page on index.html
+[You can view the page on](https://yosefgeda.github.io/to-do-list/)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
